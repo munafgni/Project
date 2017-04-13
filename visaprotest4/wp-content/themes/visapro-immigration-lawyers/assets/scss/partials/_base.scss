@@ -1,0 +1,60 @@
+// Base Font
+$base-font-family: "proxima-nova",sans-serif;
+$base-font-weight: 300;
+$base-font-size: 18px;
+$base-line-height: 1.66;
+
+// Colors
+$black: #000;
+$blue: #2093d2;
+$blue_2: #0b84c3;
+$blue_3: #2ba3e1;
+$orange: #ff8401;
+$orange_2: #C65102;
+$light-orange: #FFDEBA;
+$white: #fff;
+$yellow: #ffd203;
+$light-yellow: #fcf8e3;
+$light-yellow-2: #f7ecb5;
+$light-yellow-3: #FFFAD5;
+$green: #2da403;
+$red: #f15b5a;
+$red_2: #ff0000;
+$grey_1: #f6f6f6;
+$grey_2: #e9e8e8;
+$grey_3: #cecccc;
+$grey_4: #626262;
+$grey_5: #7f7f7f;
+$grey_6: #4c4c4c;
+$grey_7: #a4a4a4;
+$grey_8: #d3d4d5;
+$grey_9: #eaeaea;
+$take: 64px;
+
+$base-color: $black;
+$highlight: $blue;
+$border-color: $grey_2;
+
+$bc-facebook: #3b5998;
+$bc-google-plus: #dd4b39;
+$bc-linkedin: #0077b5;
+$bc-pinterest: #bd081c;
+$bc-twitter: #1da1f2;
+$bc-feed: #f08421;
+$bc-youtube: #cd201f;
+
+// Breakpoints
+$breakpoints: (
+  'mobile': 520px,
+  'tablet': 768px,
+  'medium': 992px,
+  'large': 1170px,
+);
+
+// Bootstrap
+$max-width: 1140px;
+$grid-gutter-width: 30px;
+
+@import "../vendors/bootstrap"; // Note: Unused CSS parts have been disabled
+@import "../vendors/include-media";
+@import "../modules/helpers";

@@ -1,0 +1,330 @@
+/* Forms
+--------------------------------------------- */
+
+input,
+select,
+textarea {
+	background-color: #fff;
+	border: 1px solid $border_color;
+	color: $base-color;
+	padding: 10px;
+	width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	margin-right: 10px;
+	width: auto;
+}
+
+input:focus,
+textarea:focus {
+	outline: none;
+}
+
+@include placeholder-color( $grey_5 );
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.button.button-invert:hover {
+	background: $blue;
+	border: 1px solid $blue_2;
+	border-radius: 3px;
+	box-shadow: none;
+	color: $white;
+	cursor: pointer;
+	font-weight: 400;
+	padding: 5px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: auto;
+	-webkit-appearance: none;
+}
+
+button:hover,
+button:active,
+input:hover[type="button"],
+input:hover[type="reset"],
+input:hover[type="submit"],
+.button:hover,
+.button.button-invert,
+.button.button-phone:hover,
+.button.button-outline:hover,
+.button.button-orange:hover {
+	background-color: $blue_2;
+	color: $white;
+	text-decoration: none;
+}
+
+.entry-content .button:hover {
+	color: $white;
+}
+
+.button {
+	display: inline-block;
+}
+
+.button.button-block {
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
+.button.button-phone {
+	background: $black;
+	border: none;
+	padding-left: 60px;
+	position: relative;
+	line-height: 30px;
+
+	&:before {
+		@include icon-font;
+		background: $grey_3;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+		color: $black;
+		content: "\e908";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+	}
+}
+
+.button.button-outline {
+	background: transparent;
+	border-width: 2px;
+	color: $blue;
+}
+
+.button.button-orange {
+	background: $orange;
+	border-color: $orange_2;
+
+	&:hover {
+		border-color: $blue_2;
+	}
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button {
+	display: none;
+}
+
+
+@-webkit-keyframes spin {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+  }
+}
+
+
+/* WPForms
+--------------------------------------------- */
+
+.site-container .wpforms-container {
+
+	.wpforms-title {
+		font-size: 30px;
+		font-weight: 600;
+		line-height: 1.2;
+		margin: 0;
+		text-align: center;
+	}
+
+	.wpforms-description {
+		font-size: 16px;
+		text-align: center;
+	}
+
+	.wpforms-field-label {
+		font-weight: 400;
+	}
+
+	.wpforms-field input,
+	.wpforms-field textarea {
+		border-color: $light-orange;
+		border-radius: 2px;
+		font-size: 12px;
+
+		&.wpforms-field-medium {
+			max-width: 80%;
+		}
+	}
+
+	.wpforms-field select {
+		border-color: $light-orange;
+		border-radius: 2px;
+		font-size: 12px;
+		height: 41px;
+	}
+
+	.wpforms-recaptcha-container {
+		padding-bottom: 0;
+	}
+
+	.wpforms-submit-container {
+		text-align: center;
+	}
+
+	.small-footer {
+		font-size: 12px;
+		margin: 5px 0 0;
+		text-align: center;
+	}
+}
+
+.sidebar-primary,
+.page-template-check-eligibility-response .bottom-right {
+
+	.wpforms-container {
+		background: $light-yellow-3;
+		border: 1px solid $light-orange;
+		border-top: 4px solid $orange;
+		padding: 10px 20px 20px;
+
+		.wpforms-title {
+			font-size: 24px;
+			text-align: left;
+			font-weight: 400;
+		}
+
+		h2 {
+			margin: 0;
+		}
+
+		.wpforms-recaptcha-container > div > div {
+			transform: scale(0.8);
+			transform-origin: top left;
+		}
+	}
+
+	.disclaimer {
+		font-size: 13px;
+		padding-left: 20px;
+
+		i.icon-lock {
+			font-size: 20px;
+			float: left;
+			margin: -5px 5px 15px 0;
+		}
+	}
+}
+
+/* WPForms, Ebook Download
+--------------------------------------------- */
+
+.wpforms-container#wpforms-380 .wpforms-title {
+	font-size: 21px;
+	font-weight: 600;
+}
+
+
+/* WPForms, Newsletter Signup
+--------------------------------------------- */
+
+.wpforms-container#wpforms-304 {
+	border-bottom: 1px solid $grey_5;
+
+	input[type="text"],
+	input[type="email"],
+	select {
+		border-color: $blue;
+
+		@include media(">tablet") {
+			&.wpforms-field-large {
+				max-width: 40%;
+			}
+		}
+	}
+
+	.wpforms-field-name,
+	.wpforms-field-select,
+	.wpforms-field-email {
+		position: relative;
+		padding-left: 30px;
+
+		@include media(">mobile") {
+			padding-left: 230px;
+
+			label {
+				position: absolute;
+				top: 5px;
+				left: 30px;
+				width: 180px;
+				line-height: 50px;
+			}
+		}
+	}
+
+	.wpforms-field-html {
+		padding-left: 0;
+
+		p {
+			padding-left: 30px;
+			margin: 0;
+		}
+	}
+
+	.wpforms-field-checkbox {
+		padding-left: 30px;
+
+		& > label {
+			display: none;
+		}
+
+		ul {
+			margin: 0;
+		}
+
+		li {
+			display: none;
+			list-style-type: none;
+			font-size: 15px;
+			padding-left: 30px;
+
+			&.top-level {
+				padding-left: 0;
+			}
+
+			&.top-level,
+			&.visible {
+				display: block;
+			}
+
+			@include media(">mobile") {
+				strong {
+					min-width: 190px;
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.wpforms-submit-container {
+		padding: 20px 0 30px 30px;
+		text-align: left;
+	}
+
+}

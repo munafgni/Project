@@ -1,0 +1,304 @@
+/* Defaults
+---------------------------------------------------------------------------------------------------- */
+
+/* Typographical Elements
+--------------------------------------------- */
+
+body {
+	color: $base-color;
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	font-weight: $base-font-weight;
+	line-height: $base-line-height;
+}
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.nav-menu .sub-menu,
+.sidr li.menu-item-has-children > .submenu-toggle {
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition:    all 0.1s ease-in-out;
+	-ms-transition:     all 0.1s ease-in-out;
+	transition:         all 0.1s ease-in-out;
+}
+
+a {
+	color: $highlight;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	margin: 0 0 24px;
+	padding: 0;
+}
+
+p.small {
+	font-size: 15px;
+}
+
+p.disclaimer {
+	font-size: 13px;
+
+	&.with-lock {
+		padding-left: 20px;
+
+		i.icon-lock {
+			font-size: 20px;
+			float: left;
+			margin: -5px 5px 15px 0;
+		}
+	}
+
+}
+
+strong {
+	font-weight: 600;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+blockquote {
+	background: #f6f6f6;
+	margin: 0 0 30px;
+	padding: 30px;
+	position: relative;
+
+	p:last-of-type,
+	ul:last-of-type,
+	ol {
+		margin-bottom: 0;
+	}
+
+	&.yellow {
+		background: $light-yellow;
+		border-left: 6px solid $light-yellow-2;
+		padding: 15px 15px 15px 9px;
+	}
+
+	&.red {
+		background: $red;
+		color: $white;
+		font-weight: 600;
+		padding: 15px 15px 15px 80px;
+
+		h2 {
+			color: $white;
+		}
+
+		&:before {
+			@include icon-font;
+			border-right: 1px solid $white;
+			content: "\e912";
+			display: block;
+			font-size: 22px;
+			width: 60px;
+			height: calc( 100% - 30px);
+			position: absolute;
+			text-align: center;
+			top: 15px;
+			left: 0;
+			opacity: .2;
+		}
+	}
+}
+
+code,
+pre {
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-size: 12px;
+}
+
+code {
+	padding: 2px 4px;
+	white-space: nowrap;
+}
+
+pre {
+	display: block;
+	padding: 9.5px;
+	margin: 0 0 10px;
+	line-height: 18px;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+}
+
+pre code {
+	padding: 0;
+	color: inherit;
+	white-space: pre;
+	white-space: pre-wrap;
+	background-color: transparent;
+	border: 0;
+}
+
+cite {
+	font-style: normal;
+}
+
+hr,
+.clear-line,
+img.wp-more-tag {
+	overflow: hidden;
+	width: 100%;
+	height: 1px;
+	border: none;
+	border-bottom: 1px solid $border_color;
+	margin: 0 0 20px;
+	padding: 20px 0 0;
+}
+
+.block-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+input[type="search"] {
+	box-sizing: border-box;
+}
+
+/* Headings
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $base-color;
+	font-weight: 300;
+	line-height: 1.2;
+	margin: 0;
+	margin-bottom: 16px;
+	padding: 0;
+}
+
+h1 {
+	font-size: 40px;
+
+	&.entry-title {
+		font-weight: 600;
+		margin-bottom: 6.4px;
+	}
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: 600;
+
+	&.entry-subtitle {
+		font-weight: 300;
+		margin: 0;
+		font-size: 26px;
+	}
+
+	&.large {
+		font-weight: 300;
+		font-size: 40px;
+	}
+
+	&.grey {
+		color: $grey_4;
+	}
+
+	&.borders {
+		border-top: 1px solid $border-color;
+		border-bottom: 1px solid $border-color;
+		padding: 22px 0;
+		margin-bottom: 26px;
+	}
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 300;
+
+	.small {
+		font-size: 18px;
+	}
+}
+
+h4,
+h2.entry-title {
+	font-size: 24px;
+	font-weight: 600;
+
+	&.large {
+		font-size: 35px;
+	}
+
+	&.grey-bg {
+		background: $grey_3;
+		padding: 5px 10px;
+	}
+}
+
+h4,
+h5 {
+	margin-bottom: 12px;
+}
+
+h5 {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+h6 {
+	font-size: 15px;
+	font-weight: 600;
+}
+
+@include media("<tablet") {
+
+	h2 {
+		font-size: 26px;
+	}
+
+	h2.entry-subtitle {
+		font-size: 25px;
+	}
+}
+
+.orange {
+	color: $orange;
+}
+
+.red {
+	color: $red_2;
+}
+
+/* Objects
+--------------------------------------------- */
+
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}

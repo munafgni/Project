@@ -1,0 +1,56 @@
+.wrap {
+    margin: 0 auto;
+    max-width: $max_width + 30px;
+    padding: 0 15px;
+}
+
+.site-inner .wrap {
+    @include clearfix;
+}
+
+.full-width-content .site-inner .wrap {
+    max-width: calc(665px + 30px);
+}
+
+.full-width-content.wide-content .site-inner .wrap {
+    max-width: $max-width + 30px;
+}
+
+.content-sidebar,
+.sidebar-content {
+
+    @include media(">tablet") {
+
+        .content-area {
+            float: left;
+            width: calc(68% - 30px);
+        }
+
+        .sidebar-primary {
+            float: right;
+            width: 32%;
+        }
+
+        .sidebar-content {
+
+            .sidebar {
+                float: left;
+            }
+
+            .content-area {
+                float: right;
+            }
+        }
+    }
+
+    @include media(">medium") {
+
+        .content-area {
+            width: 755px / 1140px * 100%;
+        }
+
+        .sidebar-primary {
+            width: 300px / 1140px * 100%;
+        }
+    }
+}

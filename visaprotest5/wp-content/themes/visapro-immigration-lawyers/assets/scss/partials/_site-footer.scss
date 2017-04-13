@@ -1,0 +1,136 @@
+/* Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+
+.footer-widgets {
+	@include clearfix;
+	background: $grey_1;
+	font-size: 15px;
+	padding: 30px 0;
+
+	.footer-widget-area {
+		padding-bottom: 20px;
+	}
+
+	@include media("<tablet") {
+		background: $grey_10;
+		line-height: 2;
+		padding-bottom: 0;
+	}
+
+	@include media(">tablet") {
+		.footer-widget-area {
+			float: left;
+			padding: 0 0 0 15px;
+			width: 190px / 1140px * 100%;
+		}
+
+		#footer-widget-area-5 {
+			padding-right: 0;
+			width: 380px / 1140px * 100%;
+			max-width: 285px;
+			float: right;
+		}
+	}
+
+	h6 {
+		margin-bottom: 10px;
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	a {
+		color: $base-color;
+
+		&:hover {
+			color: $highlight;
+		}
+	}
+
+	@include media("<tablet") {
+
+		.socials {
+			margin: 0;
+		}
+	}
+
+	.socials a {
+		background: $grey_7;
+		color: $white;
+		display: inline-block;
+		@include margin-no-edge( 0 2px );
+		width: 30px;
+		height: 30px;
+		padding-top: 5px;
+		text-align: center;
+		text-decoration: none;
+
+		&:hover {
+			background: $highlight;
+		}
+	}
+}
+
+.footer-email-newsletter {
+	margin-bottom: 30px;
+	position: relative;
+
+	input[type="email"] {
+		border-color: $blue;
+		border-radius: 3px;
+		padding: 5px 40px 5px 10px;
+
+		@include media("<tablet") {
+			font-size: 13px;
+			line-height: 23px;
+		}
+	}
+
+	.button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 5px 8px;
+
+		@include media("<tablet") {
+			font-size: 16px;
+			line-height: 23px;
+		}
+	}
+}
+
+/* Site Footer
+---------------------------------------------------------------------------------------------------- */
+
+.site-footer {
+	font-size: 13px;
+	padding: 15px 0;
+
+	p:first-child {
+		margin: 0 -4px 24px;
+	}
+
+	a {
+		border-bottom: 1px solid #bfbfbf;
+		color: $base-color;
+		display: inline-block;
+		line-height: 1;
+		margin: 0 4px 5px;
+		text-decoration: none;
+
+		&:hover {
+			color: $highlight;
+		}
+	}
+
+	.copyright {
+		float: right;
+
+		@include media("<tablet") {
+			float: none;
+			display: block;
+			margin: 15px 0 0 4px;
+		}
+	}
+}
